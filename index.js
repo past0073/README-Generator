@@ -55,8 +55,8 @@ inquirer.prompt([
     },
 
 ]).then((response) => {
-    fs.writeFile('info.txt', JSON.stringify(response), (err) =>
-    err ? console.log(err) : console.log("File written! :D")
+    fs.writeFile('README.md', JSON.stringify(response), (err) =>
+    err ? console.log(err) : console.log("README file generated.")
     )
 
 });
