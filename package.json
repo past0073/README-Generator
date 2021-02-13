@@ -1,0 +1,22 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "An application that accepts user input and generates an appropriately formatted readme file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/past0073/README-Generator.git"
+  },
+  "author": "Amy Pastorius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/past0073/README-Generator/issues"
+  },
+  "homepage": "https://github.com/past0073/README-Generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
