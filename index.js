@@ -1,6 +1,28 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+const generateContent = (response) =>
+    `# ${response.title}
+    ## Description
+    ${response.discription}
+    ## Table of Contents
+    * [Installation] (#installation)
+    * [Usage] (#usage)
+    * [Contributing] (#contributing)
+    * [License] (#license)
+    
+    ## Installation
+    ${response.installation}
+    ## Usage
+    ${response.usage}
+    ## Contributing
+    ${response.contribution}
+    ## Testing
+    ${response.tests}
+    ## License
+    ${response.license}
+    `
+
 inquirer.prompt([
     {
         type: 'input',
@@ -24,7 +46,7 @@ inquirer.prompt([
     },
     {
         type: 'input',
-        name: 'contributors',
+        name: 'contribution',
         message: 'Provide contribution guidelines: '
     },
     {
@@ -55,6 +77,9 @@ inquirer.prompt([
     },
 
 ]).then((response) => {
+    const writeContent = generateContent(response);
+
+
     fs.writeFile('README.md', JSON.stringify(response), (err) =>
     err ? console.log(err) : console.log("README file generated.")
     )
