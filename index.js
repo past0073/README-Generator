@@ -2,14 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 const generateContent = (response) =>
-    `# ${response.title}
-    ## Description
-    ${response.discription}
-    ## Table of Contents
-    * [Installation] (#installation)
-    * [Usage] (#usage)
-    * [Contributing] (#contributing)
-    * [License] (#license)
+    `# ${response.title} /n ## Description /n ${response.discription} /n ## Table of Contents /n * [Installation] (#installation) /n * [Usage] (#usage) /n * [Contributing] (#contributing) /n * [License] (#license)
     
     ## Installation
     ${response.installation}
