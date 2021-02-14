@@ -3,30 +3,34 @@ const fs = require('fs');
 const markdown = require('markdown').markdown;
 
 const generateContent = (response) =>
-    `# ${response.title} 
-    ## Description
-    ${response.discription}
-    ## Table of Contents 
-    * [Installation] (#installation)
-    * [Usage] (#usage)
-    * [Contributing] (#contributing)
-    * [Testing] (#testing)
-    * [License] (#license)
-    * [Questions] (#questions)
-    
-    ## Installation
-    ${response.installation}
-    ## Usage
-    ${response.usage}
-    ## Contributing
-    ${response.contribution}
-    ## Testing
-    ${response.tests}
-    ## License
-    ${response.license}
-    ## Questions
-    If you have any questions or run into any issues with this application, please feel free to find me, ${response.githubUser}, on GitHub at ${response.githubLink}. You can also reach out to me via email at ${response.email}.
-    `;
+`# ${response.title} 
+
+## Description
+
+${response.discription}
+
+## Table of Contents 
+
+* [Installation] (#installation)
+* [Usage] (#usage)
+* [Contributing] (#contributing)
+* [Testing] (#testing)
+* [License] (#license)
+* [Questions] (#questions)
+
+## Installation
+${response.installation}
+## Usage
+${response.usage}
+## Contributing
+${response.contribution}
+## Testing
+${response.tests}
+## License
+${response.license}
+## Questions
+If you have any questions or run into any issues with this application, please feel free to find me, ${response.githubUser}, on GitHub at ${response.githubLink}. You can also reach out to me via email at ${response.email}.
+`;
 
 inquirer.prompt([
     {
@@ -99,7 +103,7 @@ inquirer.prompt([
         response.license = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC) This project is licensed under the terms of the ISC license."
     }
 
-    const writeContent = markdown.toHTML(generateContent(response));
+    const writeContent = generateContent(response);
 
 
     fs.writeFile('README.md', writeContent, (err) =>
