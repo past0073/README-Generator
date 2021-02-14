@@ -1,22 +1,15 @@
-# readme generator
-    ## Description
-    this is the desc.
-    ## Table of Contents
-    * [Installation] (#installation)
-    * [Usage] (#usage)
-    * [Contributing] (#contributing)
-    * [License] (#license)
+# readme gen /n ## Description /n discription here /n ## Table of Contents /n * [Installation] (#installation) /n * [Usage] (#usage) /n * [Contributing] (#contributing) /n * [License] (#license)
     
     ## Installation
-    install instr.
+    installation here
     ## Usage
-    usage info.
+    usage here
     ## Contributing
-    contrib. info.
+    contrib. here
     ## Testing
-    test info
+    test here
     ## License
-    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) This project is licensed under the terms of the MIT license.
     ## Questions
-    If you have any questions or run into any issues with this application, please feel free to find me, past0073, on GitHub at github.com/past0073. You can also reach out to me via email at past0073@umn.edu.
+    If you have any questions or run into any issues with this application, please feel free to find me, past0073, on GitHub at gitbug.scom. You can also reach out to me via email at sldfsfds.
     
