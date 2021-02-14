@@ -1,8 +1,18 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const markdown = require('markdown').markdown;
 
 const generateContent = (response) =>
-    `# ${response.title} /n ## Description /n ${response.discription} /n ## Table of Contents /n * [Installation] (#installation) /n * [Usage] (#usage) /n * [Contributing] (#contributing) /n * [License] (#license)
+    `# ${response.title} 
+    ## Description
+    ${response.discription}
+    ## Table of Contents 
+    * [Installation] (#installation)
+    * [Usage] (#usage)
+    * [Contributing] (#contributing)
+    * [Testing] (#testing)
+    * [License] (#license)
+    * [Questions] (#questions)
     
     ## Installation
     ${response.installation}
@@ -89,7 +99,7 @@ inquirer.prompt([
         response.license = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC) This project is licensed under the terms of the ISC license."
     }
 
-    const writeContent = generateContent(response);
+    const writeContent = markdown.toHTML(generateContent(response));
 
 
     fs.writeFile('README.md', writeContent, (err) =>
