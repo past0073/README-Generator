@@ -21,6 +21,8 @@ const generateContent = (response) =>
     ${response.tests}
     ## License
     ${response.license}
+    ## Questions
+    If you have any questions or run into any issues with this application, please feel free to find me, ${response.githubUser}, on GitHub at ${response.githubLink}. You can also reach out to me via email at ${response.email}.
     `;
 
 inquirer.prompt([
@@ -56,9 +58,9 @@ inquirer.prompt([
     },
     {
         type: 'list',
-        name: 'licenses',
+        name: 'license',
         message: 'Which license would you like to use?',
-        choices: ['MIT', 'GNU GPLv3', 'Apache', 'Mozilla', 'GNU AGPLv3']
+        choices: ['MIT', 'GNU GPLv3', 'Apache', 'Mozilla', 'ISC']
     },
     {
         type: 'input',
@@ -77,6 +79,23 @@ inquirer.prompt([
     },
 
 ]).then((response) => {
+
+    if (response.license === 'MIT') {
+        response.license = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) This project is licensed under the terms of the MIT license."
+    }
+    else if (response.license === 'GNU GPLv3') {
+        response.license = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) This project is licensed under the terms of the GNU GPLv3 license."
+    }
+    else if (response.license === 'Apache') {
+        response.license = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) This project is licensed under the terms of the Apache license."
+    }
+    else if (response.license === 'Mozilla') {
+        response.license = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) This project is licensed under the terms of the Mozilla license."
+    }
+    else {
+        response.license = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC) This project is licensed under the terms of the ISC license."
+    }
+
     const writeContent = generateContent(response);
 
 
