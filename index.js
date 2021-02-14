@@ -21,7 +21,7 @@ const generateContent = (response) =>
     ${response.tests}
     ## License
     ${response.license}
-    `
+    `;
 
 inquirer.prompt([
     {
@@ -80,7 +80,7 @@ inquirer.prompt([
     const writeContent = generateContent(response);
 
 
-    fs.writeFile('README.md', JSON.stringify(response), (err) =>
+    fs.writeFile('README.md', writeContent, (err) =>
     err ? console.log(err) : console.log("README file generated.")
     )
 
