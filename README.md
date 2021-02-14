@@ -6,12 +6,12 @@ This is an application that generates a professionally formatted readme file.
 
 ## Table of Contents 
 
-* [Installation] (#installation)
-* [Usage] (#usage)
-* [Contributing] (#contributing)
-* [Testing] (#testing)
-* [License] (#license)
-* [Questions] (#questions)
+* [Installation] (##Installation)
+* [Usage] (##Usage)
+* [Contributing] (##Contributing)
+* [Testing] (##Testing)
+* [License] (##License)
+* [Questions] (##Questions)
 
 ## Installation
 nmp i
