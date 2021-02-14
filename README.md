@@ -1,26 +1,32 @@
-# ReadMe Generator 
+# Readme generator 
 
 ## Description
 
-This is an application that generates a professionally formatted readme file.
+discription here
 
 ## Table of Contents 
 
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [Contributing](#contributing)
-4. [Testing](#testing)
-5. [License](#license)
-6. [Questions](#questions)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Testing](#testing)
+* [License](#license)
+* [Questions](#questions)
 
 ## Installation
-nmp i
+```
+installation documentation here
+```
 ## Usage
+```
 usage info here
+```
 ## Contributing
-contributors here
+contributing instruction
 ## Testing
-tesitng info here
+```
+test documentation here
+```
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) This project is licensed under the terms of the MIT license.
 ## Questions

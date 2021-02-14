@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/past0073/README-Generator#readme",
   "dependencies": {
-    "inquirer": "^7.3.3",
-  }
+    "inquirer": "^7.3.3"
+    }
 }
