@@ -5,6 +5,8 @@ const markdown = require('markdown').markdown;
 const generateContent = (response) =>
 `# ${response.title} 
 
+${licenseBadge}
+
 ## Description
 
 ${response.discription}
@@ -94,19 +96,29 @@ inquirer.prompt([
 ]).then((response) => {
 
     if (response.license === 'MIT') {
-        response.license = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) This project is licensed under the terms of the MIT license."
+        response.license = "This project is licensed under the terms of the MIT license."
+        licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+        
     }
     else if (response.license === 'GNU GPLv3') {
-        response.license = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) This project is licensed under the terms of the GNU GPLv3 license."
+        response.license = "This project is licensed under the terms of the GNU GPLv3 license."
+        licenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+        
     }
     else if (response.license === 'Apache') {
-        response.license = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) This project is licensed under the terms of the Apache license."
+        response.license = "This project is licensed under the terms of the Apache license."
+        licenseBadge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+        
     }
     else if (response.license === 'Mozilla') {
-        response.license = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) This project is licensed under the terms of the Mozilla license."
+        response.license = "This project is licensed under the terms of the Mozilla license."
+        licenseBadge = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+      
     }
     else {
-        response.license = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC) This project is licensed under the terms of the ISC license."
+        response.license = "This project is licensed under the terms of the ISC license."
+        licenseBadge = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)"
+        
     }
 
     const writeContent = generateContent(response);

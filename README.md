@@ -1,8 +1,10 @@
-# Readme generator 
+# readme generator 
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-discription here
+discrption here
 
 ## Table of Contents 
 
@@ -15,19 +17,19 @@ discription here
 
 ## Installation
 ```
-installation documentation here
+install info here
 ```
 ## Usage
 ```
 usage info here
 ```
 ## Contributing
-contributing instruction
+contribution guidelines here
 ## Testing
 ```
-test documentation here
+testing instructions here
 ```
 ## License
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) This project is licensed under the terms of the MIT license.
+This project is licensed under the terms of the MIT license.
 ## Questions
-If you have any questions or run into any issues with this application, please feel free to find me, past0073, on GitHub at github.com/past0073. You can also reach out to me via email at past0073@umn.edu.
+If you have any questions or run into any issues with this application, please feel free to find me, past0073, on GitHub at github info. You can also reach out to me via email at past0073.
