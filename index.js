@@ -124,7 +124,7 @@ inquirer.prompt([
     const writeContent = generateContent(response);
 
 
-    fs.writeFile('README.md', writeContent, (err) =>
+    fs.writeFile('sampleREADME.md', writeContent, (err) =>
     err ? console.log(err) : console.log("README file generated.")
     )
 
