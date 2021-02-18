@@ -1,12 +1,11 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const markdown = require('markdown').markdown;
+
 
 const generateContent = (response) =>
 `# ${response.title} 
 
 ${licenseBadge}
-
 ## Description
 
 ${response.discription}
@@ -54,12 +53,12 @@ inquirer.prompt([
     {
         type: 'input',
         name: 'installation',
-        message: 'Provide installation instructions: '
+        message: 'What should the user type in the command line to install? '
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide usage information: '
+        message: 'What should the user add to their code to use the application? '
     },
     {
         type: 'input',
@@ -69,7 +68,7 @@ inquirer.prompt([
     {
         type: 'input',
         name: 'tests',
-        message: 'Provide test instructions: '
+        message: 'What should the  user type in the command line to run tests? '
     },
     {
         type: 'list',
@@ -124,7 +123,7 @@ inquirer.prompt([
     const writeContent = generateContent(response);
 
 
-    fs.writeFile('sampleREADME.md', writeContent, (err) =>
+    fs.writeFile('README.md', writeContent, (err) =>
     err ? console.log(err) : console.log("README file generated.")
     )
 
