@@ -1,7 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-
 const generateContent = (response) =>
 `# ${response.title} 
 

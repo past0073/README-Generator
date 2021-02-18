@@ -33,3 +33,7 @@ npm run validate
 This project is licensed under the terms of the MIT license.
 ## Questions
 If you have any questions or run into any issues with this application, please feel free to find me, past0073, on GitHub at github.com/past0073. You can also reach out to me via email at past0073@umn.edu.
+
+Walkthrough Video: 
+
+<iframe src="https://drive.google.com/file/d/1wW3Y2lT2l534zQiW89MEG6p2h8OJeIDs/preview" width="640" height="480"></iframe>
